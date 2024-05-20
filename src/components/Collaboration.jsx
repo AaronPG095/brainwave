@@ -26,6 +26,7 @@ const Collaboration = () => {
               </li>
             ))}
           </ul>
+
           <Button>Try it now</Button>
         </div>
 
@@ -33,7 +34,8 @@ const Collaboration = () => {
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
-          <div className="mt-4 relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale-75 md:scale-100">
+
+          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
@@ -46,6 +48,7 @@ const Collaboration = () => {
                 </div>
               </div>
             </div>
+
             <ul>
               {collabApps.map((app, index) => (
                 <li
@@ -60,16 +63,17 @@ const Collaboration = () => {
                     }`}
                   >
                     <img
-                      src={app.icon}
                       className="m-auto"
                       width={app.width}
                       height={app.height}
                       alt={app.title}
+                      src={app.icon}
                     />
                   </div>
                 </li>
               ))}
             </ul>
+
             <LeftCurve />
             <RightCurve />
           </div>
